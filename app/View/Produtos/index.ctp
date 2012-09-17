@@ -1,38 +1,48 @@
-<!-- File: /app/View/Produtos/index.ctp -->
+<div class="produtos index">
+	<h2><?php echo __('Produtos'); ?></h2>
+	<table cellpadding="0" cellspacing="0">
+	<tr>
+			<th><?php echo $this->Paginator->sort('id'); ?></th>
+			<th><?php echo $this->Paginator->sort('nome'); ?></th>
+			<th><?php echo $this->Paginator->sort('descricao'); ?></th>
+			<th><?php echo $this->Paginator->sort('criado'); ?></th>
+			<th><?php echo $this->Paginator->sort('modificado'); ?></th>
+			<th class="actions"><?php echo __('Ações'); ?></th>
+	</tr>
+	<?php
+	foreach ($produtos as $produto): ?>
+	<tr>
+		<td><?php echo h($produto['Produto']['id']); ?>&nbsp;</td>
+		<td><?php echo h($produto['Produto']['nome']); ?>&nbsp;</td>
+		<td><?php echo h($produto['Produto']['descricao']); ?>&nbsp;</td>
+		<td><?php echo h($produto['Produto']['created']); ?>&nbsp;</td>
+		<td><?php echo h($produto['Produto']['modified']); ?>&nbsp;</td>
+		<td class="actions">
+			<?php echo $this->Html->link(__('Visualizar'), array('action' => 'view', $produto['Produto']['id'])); ?>
+			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $produto['Produto']['id'])); ?>
+			<?php echo $this->Form->postLink(__('Deletar'), array('action' => 'delete', $produto['Produto']['id']), null, __('Tem certeza de que deseja excluir esse produto: %s?', $produto['Produto']['id'])); ?>
+		</td>
+	</tr>
+	<?php endforeach; ?>
+	</table>
+	<p>
+	<?php
+	echo $this->Paginator->counter(array(
+	'format' => __('Página {:page} de {:pages}, mostrando {:current} registros do total de {:count}, começando no registro {:start}, termina em {:end}')
+	));
+	?>	</p>
 
-<h1>Produtos</h1>
-<?php echo $this->Html->link('Add Produto', array('controller' => 'produtos', 'action' => 'add')); ?>
-<table>
-    <tr>
-        <th>Id</th>
-        <th>Nome</th>
-        <th>Descrição</th>
-        <th>Operações</th>
-    </tr>
-
-    <!-- Aqui é onde nós percorremos nossa matriz $posts, imprimindo
-         as informações dos posts -->
-
-    <?php foreach ($produtos as $produto): ?>
-    <tr>
-        <td>
-        	<?php echo $produto['Produto']['id']; ?>
-        </td>
-        <td>
-            <?php echo $this->Html->link($produto['Produto']['nome'], array('controller' => 'produtos', 'action' => 'view', $produto['Produto']['id'])); ?>
-        </td>
-        <td>
-        	<?php echo $produto['Produto']['descricao']; ?>
-        </td>
-        <td>
-            <?php echo $this->Form->postLink(
-                'Delete',
-                array('action' => 'delete', $produto['Produto']['id']),
-                array('confirm' => 'Deseja realmente excluir esse produto?')
-            )?>
-            <?php echo $this->Html->link('Edit', array('action' => 'edit', $produto['Produto']['id']));?>
-        </td>
-    </tr>
-    <?php endforeach; ?>
-
-</table>
+	<div class="paging">
+	<?php
+		echo $this->Paginator->prev('< ' . __('anterior'), array(), null, array('class' => 'prev disabled'));
+		echo $this->Paginator->numbers(array('separator' => ''));
+		echo $this->Paginator->next(__('próximo') . ' >', array(), null, array('class' => 'next disabled'));
+	?>
+	</div>
+</div>
+<div class="actions">
+	<h3><?php echo __('Ações'); ?></h3>
+	<ul>
+		<li><?php echo $this->Html->link(__('Novo Produto'), array('action' => 'add')); ?></li>
+	</ul>
+</div>

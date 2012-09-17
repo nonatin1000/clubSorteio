@@ -1,49 +1,99 @@
 <?php
+	App::uses('AppController', 'Controller');
+	/**
+	 * Produtos Controller
+	 *
+	 * @property Produto $Produto
+	 */
+	class ProdutosController extends AppController {
 	
-	class ProdutosController extends AppController{
-		public $helpers 	= array ('Html', 'Form');
-		public $name    	= 'Produtos';
-		public $components  = array('Session');
-		
-		function index(){
-			$this->set('produtos', $this->Produto->find('all'));
+	/**
+	 * index method
+	 *
+	 * @return void
+	 */
+		public function index() {
+			$this->Produto->recursive = 0;
+			$this->set('produtos', $this->paginate());
 		}
-		
-		function view($id){
+	
+	/**
+	 * view method
+	 *
+	 * @throws NotFoundException
+	 * @param string $id
+	 * @return void
+	 */
+		public function view($id = null) {
 			$this->Produto->id = $id;
-			$this->set('produto', $this->Produto->read());
+			if (!$this->Produto->exists()) {
+				throw new NotFoundException(__('Produto inválido'));
+			}
+			$this->set('produto', $this->Produto->read(null, $id));
 		}
-		
-		function add(){
-			if ($this->request->is('post')){
-				if ($this->Produto->save($this->request->data)){
-					$this->Session->setFlash('Produto salvo com sucesso!');
+	
+	/**
+	 * add method
+	 *
+	 * @return void
+	 */
+		public function add() {
+			if ($this->request->is('post')) {
+				$this->Produto->create();
+				if ($this->Produto->save($this->request->data)) {
+					$this->Session->setFlash(__('Produto salvo com sucesso.'));
 					$this->redirect(array('action' => 'index'));
+				} else {
+					$this->Session->setFlash(__('O Produto não pode ser salvo. Por favor, tente novamente.'));
 				}
 			}
 		}
-		
-		function edit($id = null){
+	
+	/**
+	 * edit method
+	 *
+	 * @throws NotFoundException
+	 * @param string $id
+	 * @return void
+	 */
+		public function edit($id = null) {
 			$this->Produto->id = $id;
-			if ($this->request->is('get')){
-				$this->request->data = $this->Produto->read();
-			}else{
-				if ($this->Produto->save($this->request->data)){
-					$this->Session->setFlash('Produto atualizado com sucesso!');
+			if (!$this->Produto->exists()) {
+				throw new NotFoundException(__('Produto inválido'));
+			}
+			if ($this->request->is('post') || $this->request->is('put')) {
+				if ($this->Produto->save($this->request->data)) {
+					$this->Session->setFlash(__('O Produto foi atualizado com sucesso!'));
 					$this->redirect(array('action' => 'index'));
+				} else {
+					$this->Session->setFlash(__('O Produto não pode ser atualizado. Por favor, tente novamente.'));
 				}
+			} else {
+				$this->request->data = $this->Produto->read(null, $id);
 			}
 		}
-		
-		function delete($id){
-			if (!$this->request->is('post')){
+	
+	/**
+	 * delete method
+	 *
+	 * @throws MethodNotAllowedException
+	 * @throws NotFoundException
+	 * @param string $id
+	 * @return void
+	 */
+		public function delete($id = null) {
+			if (!$this->request->is('post')) {
 				throw new MethodNotAllowedException();
 			}
-			if ($this->Produto->delete($id)){
-				$this->Session->setFlash('O produto id: ' . $id . ' foi deletado com sucesso.');
+			$this->Produto->id = $id;
+			if (!$this->Produto->exists()) {
+				throw new NotFoundException(__('Produto inválido'));
+			}
+			if ($this->Produto->delete()) {
+				$this->Session->setFlash(__('Produto deletado com sucesso!'));
 				$this->redirect(array('action' => 'index'));
 			}
+			$this->Session->setFlash(__('O Produto não pode ser deletado'));
+			$this->redirect(array('action' => 'index'));
 		}
 	}
-	
-?>
