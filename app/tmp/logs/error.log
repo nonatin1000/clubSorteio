@@ -1078,3 +1078,19 @@
 #3 /home/nonato/www/clubSorteio/lib/Cake/Core/App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2012-10-22 11:33:15 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 48752641 bytes) in [/var/www/clubSorteio/app/View/Layouts/default.ctp, line 48]
+2012-10-22 11:33:15 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 48752641 bytes)
+#0 /var/www/clubSorteio/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Allowed memory ...', '/var/www/clubSo...', 48)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', '/var/www/clubSo...', 48, Array)
+#2 /var/www/clubSorteio/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', '/var/www/clubSo...', 48, Array)
+#3 /var/www/clubSorteio/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-22 11:34:34 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 48752641 bytes) in [/var/www/clubSorteio/app/View/Layouts/default.ctp, line 48]
+2012-10-22 11:34:34 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 48752641 bytes)
+#0 /var/www/clubSorteio/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Allowed memory ...', '/var/www/clubSo...', 48)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', '/var/www/clubSo...', 48, Array)
+#2 /var/www/clubSorteio/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', '/var/www/clubSo...', 48, Array)
+#3 /var/www/clubSorteio/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
