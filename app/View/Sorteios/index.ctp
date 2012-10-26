@@ -2,47 +2,26 @@
 	<h2><?php echo __('Sorteios'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('idclientes'); ?></th>
+			<th><?php echo $this->Paginator->sort('id'); ?></th>
+			<th><?php echo $this->Paginator->sort('data'); ?></th>
 			<th><?php echo $this->Paginator->sort('nome'); ?></th>
-			<th><?php echo $this->Paginator->sort('endereco'); ?></th>
-			<th><?php echo $this->Paginator->sort('bairro'); ?></th>
-			<th><?php echo $this->Paginator->sort('cidade'); ?></th>
-			<th><?php echo $this->Paginator->sort('uf'); ?></th>
-			<th><?php echo $this->Paginator->sort('cep'); ?></th>
-			<th><?php echo $this->Paginator->sort('telefone'); ?></th>
-			<th><?php echo $this->Paginator->sort('celular'); ?></th>
-			<th><?php echo $this->Paginator->sort('fax'); ?></th>
-			<th><?php echo $this->Paginator->sort('email'); ?></th>
-			<th><?php echo $this->Paginator->sort('cpf_cnpj'); ?></th>
-			<th><?php echo $this->Paginator->sort('tipo'); ?></th>
-			<th><?php echo $this->Paginator->sort('status'); ?></th>
-			<th><?php echo $this->Paginator->sort('senha'); ?></th>
-			<th><?php echo $this->Paginator->sort('newsletter'); ?></th>
+			<th><?php echo $this->Paginator->sort('descricacao'); ?></th>
+			<th><?php echo $this->Paginator->sort('realizado'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php
-	foreach ($sorteios as $cliente): ?>
+	foreach ($sorteios as $sorteio): ?>
 	<tr>
-		<td><?php echo h($cliente['Cliente']['idclientes']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['nome']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['endereco']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['bairro']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['cidade']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['uf']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['cep']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['telefone']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['celular']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['fax']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['email']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['cpf_cnpj']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['tipo']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['status']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['senha']); ?>&nbsp;</td>
-		<td><?php echo h($cliente['Cliente']['newsletter']); ?>&nbsp;</td>
+		<td><?php echo h($sorteio['Sorteio']['id']); ?>&nbsp;</td>
+		<td><?php echo h($sorteio['Sorteio']['data']); ?>&nbsp;</td>
+		<td><?php echo h($sorteio['Sorteio']['nome']); ?>&nbsp;</td>
+		<td><?php echo h($sorteio['Sorteio']['descricacao']); ?>&nbsp;</td>
+		<td><?php echo h($sorteio['Sorteio']['realizado']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $cliente['Cliente']['idclientes'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $cliente['Cliente']['idclientes'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $cliente['Cliente']['idclientes']), null, __('Are you sure you want to delete # %s?', $cliente['Cliente']['idclientes'])); ?>
+			<?php echo $this->Html->link(__('View'), array('action' => 'view', $sorteio['Sorteio']['id'])); ?>
+			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $sorteio['Sorteio']['id'])); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $sorteio['Sorteio']['id']), null, __('Are you sure you want to delete # %s?', $sorteio['Sorteio']['id'])); ?>
+			<?php echo $this->Form->postLink(__('Sortear'), array('action' => 'sortear', $sorteio['Sorteio']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -66,5 +45,7 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New Sorteio'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('List Produtos'), array('controller' => 'produtos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Produto'), array('controller' => 'produtos', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

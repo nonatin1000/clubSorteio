@@ -1,11 +1,10 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Produto Model
+ * Sorteio Model
  *
- * @property Sorteio $Sorteio
  */
-class Produto extends AppModel {
+class Sorteio extends AppModel {
 
 /**
  * Display field
@@ -13,21 +12,12 @@ class Produto extends AppModel {
  * @var string
  */
 	public $displayField = 'nome';
-
-
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
-
-/**
- * hasAndBelongsToMany associations
- *
- * @var array
- */
 	public $hasAndBelongsToMany = array(
-		'Sorteio' => array(
-			'className' => 'Sorteio',
+		'Produto' => array(
+			'className' => 'Produto',
 			'joinTable' => 'sorteio_produtos',
-			'foreignKey' => 'produtos_id',
-			'associationForeignKey' => 'sorteios_id',
+			'foreignKey' => 'sorteios_id',
+			'associationForeignKey' => 'produtos_id',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',

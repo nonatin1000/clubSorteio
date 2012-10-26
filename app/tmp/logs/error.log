@@ -1094,3 +1094,264 @@
 #3 /var/www/clubSorteio/lib/Cake/Core/App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2012-10-24 10:19:01 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 48752641 bytes) in [/var/www/clubSorteio/app/View/Layouts/default.ctp, line 48]
+2012-10-24 10:19:02 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 48752641 bytes)
+#0 /var/www/clubSorteio/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Allowed memory ...', '/var/www/clubSo...', 48)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', '/var/www/clubSo...', 48, Array)
+#2 /var/www/clubSorteio/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', '/var/www/clubSo...', 48, Array)
+#3 /var/www/clubSorteio/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-24 10:54:55 Error: Fatal Error (1): Allowed memory size of 134217728 bytes exhausted (tried to allocate 48752641 bytes) in [/var/www/clubSorteio/app/View/Layouts/default.ctp, line 48]
+2012-10-24 10:54:55 Error: [FatalErrorException] Allowed memory size of 134217728 bytes exhausted (tried to allocate 48752641 bytes)
+#0 /var/www/clubSorteio/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Allowed memory ...', '/var/www/clubSo...', 48)
+#1 [internal function]: ErrorHandler::handleError(1, 'Allowed memory ...', '/var/www/clubSo...', 48, Array)
+#2 /var/www/clubSorteio/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Allowed memory ...', '/var/www/clubSo...', 48, Array)
+#3 /var/www/clubSorteio/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-24 11:18:25 Error: Fatal Error (4): syntax error, unexpected '<' in [/var/www/clubSorteio/app/View/Sorteios/add.ctp, line 17]
+2012-10-24 11:18:25 Error: [FatalErrorException] syntax error, unexpected '<'
+#0 /var/www/clubSorteio/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/clubSo...', 17)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/clubSo...', 17, Array)
+#2 /var/www/clubSorteio/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/clubSo...', 17, Array)
+#3 /var/www/clubSorteio/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-24 11:19:09 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'SorteioProduto.sorteio_id' in 'field list'
+#0 /var/www/clubSorteio/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/clubSorteio/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `Sorteio...', Array)
+#2 /var/www/clubSorteio/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('SELECT `Sorteio...', Array, Array)
+#3 /var/www/clubSorteio/lib/Cake/Model/Datasource/DboSource.php(1082): DboSource->fetchAll('SELECT `Sorteio...', false)
+#4 /var/www/clubSorteio/lib/Cake/Model/Model.php(2630): DboSource->read(Object(AppModel), Array)
+#5 /var/www/clubSorteio/lib/Cake/Model/Model.php(1846): Model->find('all', Array)
+#6 /var/www/clubSorteio/lib/Cake/Model/Model.php(1743): Model->_saveMulti(Array, '1', Object(Mysql))
+#7 /var/www/clubSorteio/app/Controller/ProdutosController.php(43): Model->save(Array)
+#8 [internal function]: ProdutosController->add()
+#9 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(ProdutosController), Array)
+#10 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(ProdutosController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2012-10-24 11:23:17 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'SorteioProduto.sorteio_id' in 'field list'
+#0 /var/www/clubSorteio/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/clubSorteio/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `Sorteio...', Array)
+#2 /var/www/clubSorteio/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('SELECT `Sorteio...', Array, Array)
+#3 /var/www/clubSorteio/lib/Cake/Model/Datasource/DboSource.php(1082): DboSource->fetchAll('SELECT `Sorteio...', false)
+#4 /var/www/clubSorteio/lib/Cake/Model/Model.php(2630): DboSource->read(Object(AppModel), Array)
+#5 /var/www/clubSorteio/lib/Cake/Model/Model.php(1846): Model->find('all', Array)
+#6 /var/www/clubSorteio/lib/Cake/Model/Model.php(1743): Model->_saveMulti(Array, '2', Object(Mysql))
+#7 /var/www/clubSorteio/app/Controller/ProdutosController.php(43): Model->save(Array)
+#8 [internal function]: ProdutosController->add()
+#9 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(ProdutosController), Array)
+#10 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(ProdutosController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2012-10-24 11:31:29 Error: [MissingActionException] Action SorteiosController::sortear() could not be found.
+#0 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-10-24 11:47:24 Error: [MissingViewException] View file "/var/www/clubSorteio/app/View/Sorteios/sortear.ctp" is missing.
+#0 /var/www/clubSorteio/lib/Cake/View/View.php(472): View->_getViewFileName(NULL)
+#1 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#2 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-26 09:59:41 Error: [MissingViewException] View file "/var/www/clubSorteio/app/View/Sorteios/sortear.ctp" is missing.
+#0 /var/www/clubSorteio/lib/Cake/View/View.php(472): View->_getViewFileName(NULL)
+#1 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#2 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-26 10:10:37 Error: Fatal Error (1): Call to a member function clientesQueIraoParticiparDoSorteio() on a non-object in [/var/www/clubSorteio/app/Controller/SorteiosController.php, line 116]
+2012-10-26 10:10:37 Error: [FatalErrorException] Call to a member function clientesQueIraoParticiparDoSorteio() on a non-object
+#0 /var/www/clubSorteio/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/clubSo...', 116)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/clubSo...', 116, Array)
+#2 /var/www/clubSorteio/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/clubSo...', 116, Array)
+#3 /var/www/clubSorteio/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-26 10:12:28 Error: [MissingViewException] View file "/var/www/clubSorteio/app/View/Sorteios/sortear.ctp" is missing.
+#0 /var/www/clubSorteio/lib/Cake/View/View.php(472): View->_getViewFileName(NULL)
+#1 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#2 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-26 10:13:18 Error: [MissingViewException] View file "/var/www/clubSorteio/app/View/Sorteios/sortear.ctp" is missing.
+#0 /var/www/clubSorteio/lib/Cake/View/View.php(472): View->_getViewFileName(NULL)
+#1 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#2 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-26 10:13:30 Error: [MissingViewException] View file "/var/www/clubSorteio/app/View/Sorteios/sortear.ctp" is missing.
+#0 /var/www/clubSorteio/lib/Cake/View/View.php(472): View->_getViewFileName(NULL)
+#1 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#2 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-26 10:13:31 Error: [MissingViewException] View file "/var/www/clubSorteio/app/View/Sorteios/sortear.ctp" is missing.
+#0 /var/www/clubSorteio/lib/Cake/View/View.php(472): View->_getViewFileName(NULL)
+#1 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#2 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-26 10:14:51 Error: Fatal Error (1): Call to undefined function save() in [/var/www/clubSorteio/app/Controller/SorteiosController.php, line 121]
+2012-10-26 10:14:51 Error: [FatalErrorException] Call to undefined function save()
+#0 /var/www/clubSorteio/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/clubSo...', 121)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/clubSo...', 121, Array)
+#2 /var/www/clubSorteio/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/clubSo...', 121, Array)
+#3 /var/www/clubSorteio/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-26 10:15:50 Error: [MissingViewException] View file "/var/www/clubSorteio/app/View/Sorteios/sortear.ctp" is missing.
+#0 /var/www/clubSorteio/lib/Cake/View/View.php(472): View->_getViewFileName(NULL)
+#1 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#2 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-26 10:16:21 Error: [MissingViewException] View file "/var/www/clubSorteio/app/View/Sorteios/sortear.ctp" is missing.
+#0 /var/www/clubSorteio/lib/Cake/View/View.php(472): View->_getViewFileName(NULL)
+#1 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#2 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-26 10:17:04 Error: [MissingViewException] View file "/var/www/clubSorteio/app/View/Sorteios/sortear.ctp" is missing.
+#0 /var/www/clubSorteio/lib/Cake/View/View.php(472): View->_getViewFileName(NULL)
+#1 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#2 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-26 10:17:47 Error: [MissingViewException] View file "/var/www/clubSorteio/app/View/Sorteios/sortear.ctp" is missing.
+#0 /var/www/clubSorteio/lib/Cake/View/View.php(472): View->_getViewFileName(NULL)
+#1 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#2 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-26 10:18:26 Error: [MissingViewException] View file "/var/www/clubSorteio/app/View/Sorteios/sortear.ctp" is missing.
+#0 /var/www/clubSorteio/lib/Cake/View/View.php(472): View->_getViewFileName(NULL)
+#1 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#2 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-26 10:19:18 Error: [MissingViewException] View file "/var/www/clubSorteio/app/View/Sorteios/sortear.ctp" is missing.
+#0 /var/www/clubSorteio/lib/Cake/View/View.php(472): View->_getViewFileName(NULL)
+#1 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#2 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-26 10:19:42 Error: [MissingViewException] View file "/var/www/clubSorteio/app/View/Sorteios/sortear.ctp" is missing.
+#0 /var/www/clubSorteio/lib/Cake/View/View.php(472): View->_getViewFileName(NULL)
+#1 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#2 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-26 10:22:02 Error: [MissingViewException] View file "/var/www/clubSorteio/app/View/Sorteios/sortear.ctp" is missing.
+#0 /var/www/clubSorteio/lib/Cake/View/View.php(472): View->_getViewFileName(NULL)
+#1 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#2 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-26 10:22:21 Error: [MissingViewException] View file "/var/www/clubSorteio/app/View/Sorteios/sortear.ctp" is missing.
+#0 /var/www/clubSorteio/lib/Cake/View/View.php(472): View->_getViewFileName(NULL)
+#1 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#2 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-26 10:23:19 Error: [MissingViewException] View file "/var/www/clubSorteio/app/View/Sorteios/sortear.ctp" is missing.
+#0 /var/www/clubSorteio/lib/Cake/View/View.php(472): View->_getViewFileName(NULL)
+#1 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(957): View->render(NULL, NULL)
+#2 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-26 10:27:06 Error: [NotFoundException] Invalid sorteio
+#0 [internal function]: SorteiosController->view()
+#1 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(SorteiosController), Array)
+#2 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-26 10:27:23 Error: [NotFoundException] Invalid sorteio
+#0 [internal function]: SorteiosController->view()
+#1 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(SorteiosController), Array)
+#2 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-26 10:27:28 Error: [NotFoundException] Invalid sorteio
+#0 [internal function]: SorteiosController->view()
+#1 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(SorteiosController), Array)
+#2 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-26 10:28:29 Error: [NotFoundException] Invalid sorteio
+#0 [internal function]: SorteiosController->view()
+#1 /var/www/clubSorteio/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(SorteiosController), Array)
+#2 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/clubSorteio/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SorteiosController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-10-26 10:41:23 Error: Fatal Error (1): Cannot use object of type Sorteio as array in [/var/www/clubSorteio/app/Controller/SorteiosController.php, line 114]
+2012-10-26 10:41:23 Error: [FatalErrorException] Cannot use object of type Sorteio as array
+#0 /var/www/clubSorteio/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/var/www/clubSo...', 114)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/var/www/clubSo...', 114, Array)
+#2 /var/www/clubSorteio/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/var/www/clubSo...', 114, Array)
+#3 /var/www/clubSorteio/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-26 10:43:19 Error: Fatal Error (1): Cannot use object of type Sorteio as array in [/var/www/clubSorteio/app/Controller/SorteiosController.php, line 114]
+2012-10-26 10:43:19 Error: [FatalErrorException] Cannot use object of type Sorteio as array
+#0 /var/www/clubSorteio/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/var/www/clubSo...', 114)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/var/www/clubSo...', 114, Array)
+#2 /var/www/clubSorteio/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/var/www/clubSo...', 114, Array)
+#3 /var/www/clubSorteio/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-26 10:43:51 Error: Fatal Error (1): Cannot use object of type Sorteio as array in [/var/www/clubSorteio/app/Controller/SorteiosController.php, line 114]
+2012-10-26 10:43:51 Error: [FatalErrorException] Cannot use object of type Sorteio as array
+#0 /var/www/clubSorteio/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/var/www/clubSo...', 114)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/var/www/clubSo...', 114, Array)
+#2 /var/www/clubSorteio/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/var/www/clubSo...', 114, Array)
+#3 /var/www/clubSorteio/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-26 10:43:54 Error: Fatal Error (1): Cannot use object of type Sorteio as array in [/var/www/clubSorteio/app/Controller/SorteiosController.php, line 114]
+2012-10-26 10:43:54 Error: [FatalErrorException] Cannot use object of type Sorteio as array
+#0 /var/www/clubSorteio/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/var/www/clubSo...', 114)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/var/www/clubSo...', 114, Array)
+#2 /var/www/clubSorteio/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/var/www/clubSo...', 114, Array)
+#3 /var/www/clubSorteio/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-26 10:47:33 Error: Fatal Error (1): Cannot use object of type Sorteio as array in [/var/www/clubSorteio/app/Controller/SorteiosController.php, line 114]
+2012-10-26 10:47:33 Error: [FatalErrorException] Cannot use object of type Sorteio as array
+#0 /var/www/clubSorteio/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/var/www/clubSo...', 114)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/var/www/clubSo...', 114, Array)
+#2 /var/www/clubSorteio/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/var/www/clubSo...', 114, Array)
+#3 /var/www/clubSorteio/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-10-26 11:56:29 Error: [MissingControllerException] Controller class SorteioprodutosController could not be found.
+#0 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-10-26 11:56:33 Error: [MissingControllerException] Controller class SorteiosprodutosController could not be found.
+#0 /var/www/clubSorteio/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
