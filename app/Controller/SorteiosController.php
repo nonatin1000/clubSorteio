@@ -31,7 +31,12 @@ class SorteiosController extends AppController {
 		if (!$this->Sorteio->exists()) {
 			throw new NotFoundException(__('Invalid sorteio'));
 		}
-		$this->set('sorteio', $this->Sorteio->read(null, $id));
+		$sorteio=$this->Sorteio->read(null, $id);
+		for($i=0;$i<count($sorteio["SorteioProduto"] );$i++){
+			$cli=$this->Cliente->read(null,$sorteio["SorteioProduto"][$i]["clientes_sorteado_id"]);
+			$sorteio["SorteioProduto"][$i]["cliente"]=$cli["Cliente"]["nome"];
+		}
+		$this->set('sorteio', $sorteio);
 	}
 
 /**
@@ -102,6 +107,16 @@ class SorteiosController extends AppController {
 		$this->Session->setFlash(__('Sorteio was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
+	
+	
+	/**
+	 * metodo que realiza sorteio
+	 *
+	 * @throws MethodNotAllowedException
+	 * @throws NotFoundException
+	 * @param string $id
+	 * @return void
+	 */
 	public function sortear($id = null) {
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
@@ -118,14 +133,15 @@ class SorteiosController extends AppController {
 		$concorrentes=$this->Cliente->clientesQueIraoParticiparDoSorteio();
 		foreach ($sorteio["Produto"] as $produto){
 			$pos=rand(0,count($concorrentes));
-			pr($concorrentes[$pos]);
 			$produto["SorteioProduto"]["clientes_sorteado_id"]=$concorrentes[$pos]["c"]["idclientes"];
+			$this->SorteioProduto->id=$produto["SorteioProduto"]["id"];
 			$this->SorteioProduto->save($produto["SorteioProduto"]);
 			unset($concorrentes[$pos]);
-			$sorteio["Sorteio"]["realizado"]=true;
-			$this->Sorteio->save($sorteio["Sorteio"]);
+			$this->Sorteio->saveField("realizado",true);
 		}
 		$this->Session->setFlash("Sorteio Realizado Com Sucesso!");
 		$this->redirect(array('action' => 'view',$sorteio["Sorteio"]["id"]));
 	}
 }
+
+

@@ -62,7 +62,7 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'localhost',
+		'host' => '146.185.21.78',
 		'login' => 'root',
 		'password' => 'root',
 		'database' => 'gadocomercial',

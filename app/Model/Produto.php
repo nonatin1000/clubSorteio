@@ -39,5 +39,21 @@ class Produto extends AppModel {
 			'insertQuery' => ''
 		)
 	);
+	
+	public $hasMany = array(
+			'SorteioProduto' => array(
+					'className' => 'SorteioProduto',
+					'foreignKey' => 'produtos_id',
+					'dependent' => false,
+					'conditions' => '',
+					'fields' => '',
+					'order' => '',
+					'limit' => '',
+					'offset' => '',
+					'exclusive' => '',
+					'finderQuery' => '',
+					'counterQuery' => ''
+			)
+	);
 
 }

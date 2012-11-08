@@ -40,39 +40,19 @@
 	</ul>
 </div>
 <div class="related">
-	<h3><?php echo __('Related Produtos'); ?></h3>
+	<h3><?php echo __('Produtos'); ?></h3>
 	<?php if (!empty($sorteio['Produto'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
-		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Nome'); ?></th>
-		<th><?php echo __('Descricao'); ?></th>
-		<th><?php echo __('Created'); ?></th>
-		<th><?php echo __('Modified'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
+		<th><?php echo __('Produto'); ?></th>
+		<th><?php echo __('Vencedor'); ?></th>
 	</tr>
-	<?php
-		$i = 0;
-		foreach ($sorteio['Produto'] as $produto): ?>
+	<?php for($i=0;$i<count($sorteio["SorteioProduto"] );$i++){ ?>
 		<tr>
-			<td><?php echo $produto['id']; ?></td>
-			<td><?php echo $produto['nome']; ?></td>
-			<td><?php echo $produto['descricao']; ?></td>
-			<td><?php echo $produto['created']; ?></td>
-			<td><?php echo $produto['modified']; ?></td>
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'produtos', 'action' => 'view', $produto['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'produtos', 'action' => 'edit', $produto['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'produtos', 'action' => 'delete', $produto['id']), null, __('Are you sure you want to delete # %s?', $produto['id'])); ?>
-			</td>
+			<td><?php echo $sorteio["Produto"][$i]["nome"]; ?></td>
+			<td><?php echo $sorteio["SorteioProduto"][$i]["cliente"]; ?></td>
 		</tr>
-	<?php endforeach; ?>
+	<?php } ?>
 	</table>
 <?php endif; ?>
-
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Produto'), array('controller' => 'produtos', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
 </div>

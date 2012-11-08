@@ -11,7 +11,8 @@ class Cliente extends AppModel {
  *
  * @var string
  */
-	public $primaryKey = 'idclientes';
+	var $primaryKey = 'idclientes';
+	
 	
 	/**
 	 * SQL seleciona os clientes que tem pelomenos um anuncio ativo com vencimento depois do dia 20 de cada mes.

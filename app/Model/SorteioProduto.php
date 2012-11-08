@@ -25,13 +25,6 @@ class SorteioProduto extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
-		'Cliente' => array(
-			'className' => 'Cliente',
-			'foreignKey' => 'clientes_sorteado_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
 		'Sorteios' => array(
 			'className' => 'Sorteios',
 			'foreignKey' => 'sorteios_id',
